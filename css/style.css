@@ -109,21 +109,56 @@ h3{
 
 /** productos **/
 .producto{
-
+    background-color: var(--primarioOscuro);
+    padding: 1rem;/**con esto el producto se separa un poco del borde**/
 }
 
 .producto__imagen{
-
+    width: 100%;/**con esto la imagen se ajusta bien al espacio del div**/
 }
 
-.producto__informacion{
-
-}
 
 .producto__nombre{
-
+    font-size: 4rem;
 }
 
 .producto__precio{
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+
+.producto__nombre,
+.producto__precio{
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;/**interlineado**/
+}
+
+/**GRAFICOS**/
+.graficos{
+    min-height: 30rem;/**esto quiere decier que es la altura minima**/
     
+}
+
+.grafico--camisas{
+    grid-row: 2 / 3 ;/**el row vendria siendo los graficos de arriba hacia abajo**/
+    grid-column: 1 / 3;/**el colum es para modificar las columnas van de izquierda a derecha **/
+    background-image: url(../img/grafico1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grafico--node{
+    background-image: url(../img/grafico2.jpg);
+    grid-column: 1 / 3;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media(min-width: 360px){
+    .grafico--node{
+        grid-row: 5 /6;
+        grid-column: 2 / 4;
+    }
 }
